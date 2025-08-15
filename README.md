@@ -6,77 +6,77 @@ The "BOT Luamod" is a Discord bot whose main function is to moderate a server, p
 
 I. General
 
-- ping - Displays the bot's latency.
+- `ping` - Displays the bot's latency.
 
-- help - Displays the list of commands.
+- `help` - Displays the list of commands.
 
-- avatar < member > - Displays a member's avatar.
+- `avatar < member >` - Displays a member's avatar.
 
-- userinfo < member > - Displays user information.
+- `userinfo < member >` - Displays user information.
 
-- serverinfo - Displays server information.
+- `serverinfo` - Displays server information.
 
-- botinfo - Displays bot profile information.
+- `botinfo` - Displays bot profile information.
 
 II. Moderators
 
-- warn < member > < reason > - Warns a user.
+- `warn < member > < reason >` - Warns a user.
 
-- unwarn < member > - Removes all warnings from the user.
+- `unwarn < member >` - Removes all warnings from the user.
 
-- warnings < member > - Views the number and reason(s) of warnings for a user.
+- `warnings < member >` - Views the number and reason(s) of warnings for a user.
 
-- warninglist - Views the user(s) warned and the number of warnings each has.
+- `warninglist` - Views the user(s) warned and the number of warnings each has.
 
-- clear < quantity > - Deletes chat messages.
+- `clear < quantity >` - Deletes chat messages.
 
-- purge < member > < quantity > - Deletes a member's chat messages.
+- `purge < member > < quantity >` - Deletes a member's chat messages.
 
-- slow < seconds > - Activates slow mode in the channel.
+- `slow < seconds >` - Activates slow mode in the channel.
 
-- lock - Locks a channel.
+- `lock` - Locks a channel.
 
-- unlock - Unlocks a locked channel.
+- `unlock` - Unlocks a locked channel.
 
-- lockdown - Locks all channels.
+- `lockdown` - Locks all channels.
 
-- unlockdown - Unlocks all channels.
+- `unlockdown` - Unlocks all channels.
 
-- mute < member > < minutes > - Temporarily mutes a member.
+- `mute < member > < minutes >` - Temporarily mutes a member.
 
-- unmute < member > - Removes a member's mute.
+- `unmute < member >` - Removes a member's mute.
 
-- kick < member > - Kicks a member from the server.
+- `kick < member >` - Kicks a member from the server.
 
-- ban < member > - Bans a member from the server.
+- `ban < member >` - Bans a member from the server.
 
-- unban < ID > - Removes a ban from a user by ID.
+- `unban < ID >` - Removes a ban from a user by ID.
 
-- tempban < member > < quantity > - Bans a member from the server for a period of time.
+- `tempban < member > < quantity >` - Bans a member from the server for a period of time.
 
-- softban < member > - Bans a member from the server for one second to clear messages.
+- `softban < member >` - Bans a member from the server for one second to clear messages.
 
-- setlog < channel > - Sets a channel to receive server action logs.
+- `setlog < channel >` - Sets a channel to receive server action logs.
 
 III. Developers
 
-- restart - Restarts the bot.
+- `restart` - Restarts the bot.
 
-- toswitchoff - Turns off the bot.
+- `toswitchoff` - Turns off the bot.
 
-- log - Views the bot's log history.
+- `log` - Views the bot's log history.
 
-- clearlog - Clears the bot's log history.
+- `clearlog` - Clears the bot's log history.
 
-- reloadcog < cog > - Reloads a specific cog.
+- `reloadcog < cog >` - Reloads a specific cog.
 
-- debug - Displays general and technical information about the bot.
+- `debug` - Displays general and technical information about the bot.
 
 IV. AI
 
-- on - Turns on AI chat.
+- `on` - Turns on AI chat.
 
-- off - Turns off AI chat.
+- `off` - Turns off AI chat.
 
 # 3. Simple API
 
@@ -108,31 +108,31 @@ Educational and didactic REST API separate from the simple API and also built wi
 
 - Bash
 
-git clone https://github.com/jose-techcode/BOT_Luamod
+`git clone https://github.com/jose-techcode/BOT_Luamod`
 
 # 6. Project Folder
 
 - Bash
 
-cd BOT_Luamod
+`cd BOT_Luamod`
 
 # 7. Install Dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 # 8. Setting Environment Variables
 
 Create a file called .env in the project root and add your bot token:
 
-DISCORD_TOKEN=your_token
+`DISCORD_TOKEN=your_token`
 
 In the same .env file, if you're creating specific commands for only the bot developer to use, add:
 
-DEV_ID=your_id
+`DEV_ID=your_id`
 
 Also, in the same .env file, if you're creating specific commands for using the bot's AI, add:
 
-API_KEY_OPEN_ROUTER=your_api_key
+`API_KEY_OPEN_ROUTER=your_api_key`
 
 These files should not be uploaded to Github, as they contain sensitive information. Therefore, they should be included in .gitignore.
 
@@ -140,37 +140,37 @@ These files should not be uploaded to Github, as they contain sensitive informat
 
 - Bash
 
-cd src/
+`cd src`
 
 - Python
 
-python bot.py
+`python bot.py`
 
 # 10. Run in Docker
 
 - Building the Image
 
-docker build -t bot_luamod .
+`docker build -t bot_luamod .`
 
 - Scan the docker image with trivy tool (false positives are expected)
 
-trivy image bot_luamod:latest
+`trivy image bot_luamod:latest`
 
 - Running the Container
 
-docker run -it --name container_bot_luamod bot_luamod
+`docker run -it --name container_bot_luamod bot_luamod`
 
 # 10.1. Run in Docker (with bash)
 
 - Execute this script to build docker image, scan docker image and construct a container.
 
-./docker_trivy.sh
+`./docker_trivy.sh`
 
 # 10.2. Run in Docker (with makefile)
 
 - Execute this makefile command to build docker image, scan docker image and construct a container.
 
-make container
+`make container`
 
 # 11. Contribution
 
@@ -182,4 +182,4 @@ This project is licensed under the AGPL license.
 
 # 13. Notes
 
-In the future, a SQL database may be added. Tests of new technologies or features may appear.
+In the future, a SQL database may be added. Tests of new technologies or features may appear. Finished.
