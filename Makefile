@@ -8,4 +8,4 @@ echo:
 # make container
 
 container:
-	./docker_trivy.sh
+	./docker-trivy.sh
