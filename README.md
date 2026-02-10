@@ -1,6 +1,6 @@
-# 1. BOT Luamod
+# 1. Bot Luamod
 
-The "BOT Luamod" is a Discord bot whose main function is to moderate a server, provide a logging system for monitoring, and offer features for members and developers, including AI commands (chatbot). By cloning the repository, you can enter "developer mode," control the AI, and access a funcional REST GET API and a local REST API, provided you configure these elements correctly.
+[OBSOLETE] The Bot Luamod is a Discord Bot whose main function is to moderate a server, provide a logging system for monitoring, and offer features for members and developers, including AI commands (chatbot).
 
 # 2. Features
 
@@ -93,28 +93,26 @@ Educational and didactic REST API separate from the simple API and also built wi
 
 # 4. Technologies
 
-- Language: Python
-- Shell Scripting: Bash
-- Framework: FastAPI
-- Library: Discord.py & Others
-- Environment: Linux
-- Files Format: Makefile, Json and Yaml
-- Code Versioning: Git
-- Containerization: Docker
-- Scanner (docker image): Trivy
-- CI/CD: Github Actions
+- Language: Python (≈ 3.13)
+- Shell Scripting: Bash (≈ 5.2)
+- Framework: FastAPI (0.116.1)
+- Main Library: Discord.py (2.5.2)
+- Code Versioning: Git (≈ 2.33.0)
+- Containerization: Docker (≈ 28.0.0)
+- Scanner: Trivy (≈ 0.65.0)
+- CI: Github Actions
 
 # 5. Clone the Repository
 
 - Bash
 
-`git clone https://github.com/jose-techcode/BOT_Luamod`
+`git clone https://github.com/jose-techcode/Bot-Luamod`
 
 # 6. Project Folder
 
 - Bash
 
-`cd BOT_Luamod`
+`cd Bot-Luamod`
 
 # 7. Install Dependencies
 
@@ -148,23 +146,23 @@ These files should not be uploaded to Github, as they contain sensitive informat
 
 # 10. Run in Docker
 
-- Building the Image
+- Building the Image.
 
-`docker build -t bot_luamod .`
+`docker build -t bot-luamod .`
 
-- Scan the docker image with trivy tool (false positives are expected)
+- Scan the docker image with trivy tool (false positives are expected).
 
-`trivy image bot_luamod:latest`
+`trivy image bot-luamod:latest`
 
-- Running the Container
+- Running the Container.
 
-`docker run -it --name container_bot_luamod bot_luamod`
+`docker run -it --name container_bot_luamod bot-luamod`
 
 # 10.1. Run in Docker (with bash)
 
 - Execute this script to build docker image, scan docker image and construct a container.
 
-`./docker_trivy.sh`
+`./docker-trivy.sh`
 
 # 10.2. Run in Docker (with makefile)
 
@@ -179,7 +177,3 @@ Feel free to open Issues or submit Pull Requests.
 # 12. License
 
 This project is licensed under the AGPL license.
-
-# 13. Notes
-
-In the future, a SQL database may be added. Tests of new technologies or features may appear. Finished.
