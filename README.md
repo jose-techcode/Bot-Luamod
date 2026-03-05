@@ -82,21 +82,11 @@ IV. AI
 
 Simple API built with FastAPI to view the bot's overall status. Localhost.
 
-# 3.1. REST API
-
-Educational and didactic REST API separate from the simple API and also built with FastAPI. Localhost.
-
-- GET - View information.
-- POST - Create information.
-- PUT - Update information.
-- DELETE - Delete information.
-
 # 4. Technologies
 
 - Language: Python (≈ 3.13)
-- Shell Scripting: Bash (≈ 5.2)
 - Framework: FastAPI (0.116.1)
-- Main Library: Discord.py (2.5.2)
+- Library: Discord.py (2.5.2)
 - Code Versioning: Git (≈ 2.33.0)
 - Containerization: Docker (≈ 28.0.0)
 - Scanner: Trivy (≈ 0.65.0)
@@ -150,25 +140,13 @@ These files should not be uploaded to Github, as they contain sensitive informat
 
 `docker build -t bot-luamod .`
 
-- Scan the docker image with trivy tool (false positives are expected).
+- Optional: Scan the docker image with trivy tool (false positives are expected).
 
 `trivy image bot-luamod:latest`
 
 - Running the Container.
 
 `docker run -it --name container_bot_luamod bot-luamod`
-
-# 10.1. Run in Docker (with bash)
-
-- Execute this script to build docker image, scan docker image and construct a container.
-
-`./docker-trivy.sh`
-
-# 10.2. Run in Docker (with makefile)
-
-- Execute this makefile command to build docker image, scan docker image and construct a container.
-
-`make container`
 
 # 11. Contribution
 
